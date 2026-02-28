@@ -97,6 +97,7 @@ a{
     overflow:hidden;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
     text-align:center;
+    transition:0.3s;
 }
 
 .menu__card img{
@@ -114,4 +115,9 @@ a{
 .menu__card p{
     margin-bottom:16px;
     font-weight:bold;
+}
+
+.menu__card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15)
 }
