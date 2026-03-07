@@ -1,14 +1,8 @@
-const links=document.querySelectorAll('nav a');
-
-links.forEach(link=>{
-    link.addEventListener('click',function(e){
-        e.preventDefault();
-
-        const id=this.getAttribute('href');
-        const target=document.querySelector(id);
-
-        target.scrollIntoView({
-            behabior:'smooth'
-        });
-    });
+window.addEventListener("scroll",function(){
+    const header=this.document.querySelector(".header");
+    if(this.window.scrollY>50){
+        header.style.boxShadow="0 2px 8px rgba(0,0,0,0.1)";
+    }else{
+        header.style.boxShadow="none";
+    }
 });
