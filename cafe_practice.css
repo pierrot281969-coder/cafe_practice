@@ -53,7 +53,7 @@ a{
 }
 
 .nav a:hover{
-    opacity:0.6;
+    color:#b08968;
 }
 
 .hero{
@@ -76,7 +76,7 @@ a{
 }
 
 .hero__inner h2{
-    font-size:40px;
+    font-size:44px;
     margin-bottom:10px;
 }
 
@@ -91,7 +91,7 @@ a{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.3);
+    background:rgba(0,0,0,0.2);
 }
 
 .hero p{
