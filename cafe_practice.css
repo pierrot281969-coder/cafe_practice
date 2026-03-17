@@ -57,8 +57,10 @@ a{
 }
 
 .hero{
-    background:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80")
-    center/cover no-repeat;
+    background:url(sakura.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
