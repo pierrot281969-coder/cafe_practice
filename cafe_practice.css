@@ -130,6 +130,17 @@ a{
     background:linear-gradient(180deg,#f6f1ea 0%,#f2ebe3 100%);
 }
 
+.gallery{
+    background:#fff;
+}
+
+.inner__gallery{
+    display:flex;
+    gap:32px;
+    justify-content:center;
+    flex-wrap:nowrap;
+}
+
 .menu__list{
     display:flex;
     gap:32px;
