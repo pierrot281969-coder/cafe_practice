@@ -1,11 +1,11 @@
 *{
-    box-sizing:border-box
+    box-sizing:border-box;
 }
 
 body{
     margin:0;
     font-family:"Helvetica Neue",Arial,sans-serif;
-    color:#4a3f35;
+    color:rgba(173,90,104,0.9);
 }
 
 img{
@@ -23,7 +23,7 @@ a{
     justify-content:space-between;
     align-items:center;
     padding:12px 40px;
-    background:#fff;
+    background:rgba(99,83,71,0.2);
     position:sticky;
     top:0;
     z-index:10;
@@ -53,23 +53,25 @@ a{
 }
 
 .nav a:hover{
-    color:#b08968;
+    color:rgba(159,172,173,0.8);
 }
 
 .hero{
-    background:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80")
-    center/cover no-repeat;
+    background:url(sakura.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    color:#fff;
+    color:rgba(99,83,71,0.8);
     position:relative;
     min-height:90vh;
 }
 
 .hero__inner{
-    background:rgba(0,0,0,0.4);
+    background:rgba(213,201,194,0.5);
     padding:40px 50px;
     border-radius:8px;
     max-width:600px;
@@ -78,11 +80,6 @@ a{
 .hero__inner h2{
     font-size:44px;
     margin-bottom:10px;
-}
-
-.hero h2{
-    font-size:40px;
-    margin-bottom:16px;
     letter-spacing:0.1rem;
     position:relative;
 }
@@ -91,7 +88,7 @@ a{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.2);
+    background:rgba(0,0,0,0.1);
 }
 
 .hero p{
@@ -115,12 +112,12 @@ a{
     display:block;
     width:60px;
     height:2px;
-    background:#b08968;
+    background:rgba(99,83,71,0.8);
     margin:16px auto 0;
 }
 
 .section:nth-child(even){
-    background:#f8f5f2;
+    background:rgba(213,201,194,0.2);
 }
 
 .about p{
@@ -132,9 +129,39 @@ a{
 }
 
 .about{
-    background:linear-gradient(180deg,#f6f1ea 0%,#f2ebe3 100%);
+    background:rgba(213,201,194,0.2);
 }
 
+.gallery{
+    background:rgba(213,201,194,0.3);
+}
+
+.gallery-slider{
+    overflow:hidden;
+    width:100%;
+}
+
+.gallery-track{
+    display:flex;
+    width:max-content;
+    animation:scroll 30s linear infinite;
+}
+
+.gallery-track img{
+    width:250px;
+    margin-right:20px;
+    border-radius:8px;
+}
+
+/*アニメーション*/
+@keyframes scroll{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-50%);
+    }
+}
 .menu__list{
     display:flex;
     gap:32px;
@@ -144,12 +171,12 @@ a{
 
 .menu__card{
     width:280px;
-    background:#fff;
+    background:rgba(173,90,104,0.1);
     border-radius:8px;
     overflow:hidden;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
     text-align:center;
-    transition:0.3s;
+    transition:transform 0.3s,box-shadow 0.3s;
 }
 
 .menu__card img{
@@ -170,9 +197,8 @@ a{
 }
 
 .menu__card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 8px 20px rgba(100,70,50,0.2);
     transform:translateY(-10px) scale(1.02);
+    box-shadow:0 8px 20px rgba(99,83,71,0.2);
 }
 
 .feature__inner{
@@ -207,17 +233,17 @@ a{
 }
 
 .feature{
-    background:#f8f8f8;
+    background:rgba(213,201,194,0.3);
     padding:100px 20px;
 }
 
 .access{
-    background:#f8f5f2;
+    background:rgba(213,201,194,0.2);
     padding:100px 20px;
 }
 
 .access-info{
-    background:#fff;
+    background:rgba(173,90,104,0.1);
     padding:40px;
     text-align:center;
     max-width:600px;
@@ -235,8 +261,8 @@ a{
     display:inline-block;
     margin-top:20px;
     padding:10px 20px;
-    background:#5c4033;
-    color:#fff;
+    background:rgba(99,83,71,0.9);
+    color:rgba(213,201,194,0.9);
     border-radius:30px;
     letter-spacing:0.05em;
     transition:background 0.3s ease;
@@ -244,7 +270,7 @@ a{
 }
 
 .access-info a:hover{
-    background:#7a5644;
+    background:rgba(159,172,173,0.1);
     transform:translateY(-2px);
 }
 
@@ -270,7 +296,7 @@ html{
 .footer{
     text-align:center;
     padding:30px;
-    background:#4a3f35;
-    color:#fff;
+    background:rgba(99,83,71,0.5);
+    color:rgba(173,90,104,0.9);
     font-size:14px;
 }
