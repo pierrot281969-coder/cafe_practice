@@ -4,8 +4,17 @@
 
 body{
     margin:0;
-    font-family:"Helvetica Neue",Arial,sans-serif;
     color:rgba(173,90,104,0.9);
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2, h3{
+  font-family: "Klee One", cursive;
+  font-weight: 600;
+  font-style: normal;
 }
 
 img{
@@ -18,17 +27,49 @@ a{
     text-decoration:none;
 }
 
+/*ヘッダー*/
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    cursor:pointer;
+    padding:5px;
+}
+
+.hamburger span{
+    width:25px;
+    height:3px;
+    background:rgba(99,83,71,0.8);
+    border-radius:2px;
+    transition:all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform:rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:rotate(-45deg) translate(7px,-6px);
+}
+
 .header{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:12px 40px;
-    background:rgba(99,83,71,0.2);
+    background:rgba(213,201,194,0.8);
+    backdrop-filter:blur(8px);
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
     position:sticky;
     top:0;
     z-index:10;
 }
 
+/*ロゴとナビゲーション*/
 .logo{
     font-size:20px;
     font-weight:bold;
@@ -56,6 +97,7 @@ a{
     color:rgba(159,172,173,0.8);
 }
 
+/*ヒーロータグ*/
 .hero{
     background:url(sakura.jpg);
     background-position:center;
@@ -95,6 +137,7 @@ a{
     position:relative;
 }
 
+/*セクションタグ*/
 .section{
     padding:80px 20px;
 }
@@ -116,10 +159,7 @@ a{
     margin:16px auto 0;
 }
 
-.section:nth-child(even){
-    background:rgba(213,201,194,0.2);
-}
-
+/*お店について*/
 .about p{
     text-align:center;
     max-width:600px;
@@ -132,6 +172,7 @@ a{
     background:rgba(213,201,194,0.2);
 }
 
+/*ギャラリー*/
 .gallery{
     background:rgba(213,201,194,0.3);
 }
@@ -144,7 +185,7 @@ a{
 .gallery-track{
     display:flex;
     width:max-content;
-    animation:scroll 30s linear infinite;
+    animation:scroll 50s linear infinite;
 }
 
 .gallery-track img{
@@ -161,6 +202,11 @@ a{
     100%{
         transform:translateX(-50%);
     }
+}
+
+/*メニュー*/
+.menu{
+    background:rgba(213,201,194,0.2);
 }
 .menu__list{
     display:flex;
@@ -201,6 +247,7 @@ a{
     box-shadow:0 8px 20px rgba(99,83,71,0.2);
 }
 
+/*内装について*/
 .feature__inner{
     display:flex;
     align-items:center;
@@ -237,6 +284,7 @@ a{
     padding:100px 20px;
 }
 
+/*アクセス*/
 .access{
     background:rgba(213,201,194,0.2);
     padding:100px 20px;
@@ -274,6 +322,7 @@ a{
     transform:translateY(-2px);
 }
 
+/*スマホ対応*/
 @media(max-width:768px){
     .nav ul{
         gap:12px;
@@ -287,12 +336,63 @@ a{
         align-items:center;
         gap:20px;
     }
+    .section{
+        padding:60px 20px;
+    }
+    .section h2{
+        font-size:24px;
+        margin-bottom:24px;
+    }
+    .hero__inner{
+        padding:24px 20px;
+    }
+    .hero__inner h2{
+        font-size:24px;
+    }
+    .body{
+        font-size:12px;
+    }
+    .menu__card{
+        width:90%;
+    }
+    .header{
+        padding:12px 20px;
+    }
+    .hamburger{
+        display:flex;
+    }
+    .nav{
+        display:none;
+        position:fixed;
+        top:60px;
+        left:0;
+        right:0;
+        background:rgba(255,255,255,0.95);
+        backdrop-filter:blur(10px);
+        padding:20px;
+        box-shadow:0 4px 20px rgba(0,0,0,0.1);
+    }
+    .nav.active{
+        display:block;
+    }
+    .nav ul{
+        flex-direction:column;
+        gap:16px;
+        text-align:center;
+    }
+    .nav a{
+        font-size:16px;
+        padding:10px;
+        display:block;
+    }
 }
 
+/*スムーススクロール*/
 html{
     scroll-behavior:smooth;
 }
 
+/*フッター*/
 .footer{
     text-align:center;
     padding:30px;
