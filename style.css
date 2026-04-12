@@ -34,18 +34,36 @@ a{
     gap:4px;
     cursor:pointer;
     padding:5px;
+    position:relative;
+    width:30px;
+    height:24px;
 }
 
 .hamburger span{
-    width:25px;
+    position:absolute;
+    left:0;
+    width:100%;
     height:3px;
     background:rgba(99,83,71,0.8);
     border-radius:2px;
     transition:all 0.3s ease;
 }
 
+.hamburger span:nth-child(1){
+    top:0;
+}
+
+.hamburger span:nth-child(2){
+    top:10px;
+}
+
+.hamburger span:nth-child(3){
+    top:20px;
+}
+
 .hamburger.active span:nth-child(1){
-    transform:rotate(45deg) translate(5px,5px);
+    top:10px;
+    transform:rotate(45deg)
 }
 
 .hamburger.active span:nth-child(2){
@@ -53,7 +71,8 @@ a{
 }
 
 .hamburger.active span:nth-child(3){
-    transform:rotate(-45deg) translate(7px,-6px);
+    top:10px;
+    transform:rotate(-45deg)
 }
 
 .header{
@@ -161,13 +180,16 @@ a{
 
 /*お店について*/
 .about p{
-    text-align:center;
-    max-width:600px;
+    max-width:650px;
     margin:0 auto;
-    line-height:2;
+    line-height:1.8;
     font-weight:300;
+    margin-bottom: 12px;
 }
 
+.about h2{
+    margin-bottom:12px;
+}
 .about{
     background:rgba(213,201,194,0.2);
 }
@@ -325,6 +347,9 @@ a{
 /*スマホ対応*/
 @media(max-width:768px){
     .nav ul{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
         gap:12px;
         font-size:12px;
     }
